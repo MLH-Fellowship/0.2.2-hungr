@@ -1,0 +1,9 @@
+type Restaurant @model {
+  id: ID!
+  name: String!
+  rating: Integer
+}
+type Room @model {
+  id: ID!
+  restaurants: [Restaurant]
+}
