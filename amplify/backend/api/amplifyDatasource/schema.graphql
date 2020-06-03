@@ -1,9 +1,17 @@
 type Restaurant @model {
   id: ID!
   name: String!
-  rating: Integer
+  rating: Int
 }
+
 type Room @model {
   id: ID!
+  code: String
   restaurants: [Restaurant]
+  users: [User]
+  current: Restaurant
+}
+
+type User @model {
+  id: ID!
 }
