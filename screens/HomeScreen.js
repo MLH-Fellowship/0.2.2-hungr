@@ -13,7 +13,7 @@ export default function HomeScreen({ navigation }) {
         style={styles.gradient}
       >
         <Header title={header.title}/>
-        <JoinRoom />
+        <JoinRoom navigation={navigation}/>
         <CreateRoom navigation={navigation} />
       </LinearGradient>
     </View>
