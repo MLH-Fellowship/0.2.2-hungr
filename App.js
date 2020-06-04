@@ -35,7 +35,7 @@ function App() {
           }}
         />
         <Stack.Screen
-          name="Match"
+          name="MatchScreen"
           component={MatchScreen}
           options={{
             headerTransparent: true,

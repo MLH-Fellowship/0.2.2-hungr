@@ -14,28 +14,24 @@ const GetDirections = () => {
         }}
         buttonStyle={styles.buttonStyle}
       />
-      <Input
-        placeholder="Room Pin"
-        containerStyle={styles.Input}
-        enablesReturnKeyAutomatically={true}
-      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  buttonStyle: {
+    backgroundColor: "transparent",
+    borderColor: "#fff",
+    borderWidth: 1,
+    borderRadius: 60,
+    height: 50,
+    width: 300,
+  },
   container: {
     flex: 2,
     alignItems: "center",
     justifyContent: "center",
     padding: 30,
-  },
-  buttonStyle: {
-    backgroundColor: "transparent",
-    borderRadius: 60,
-    flex: 1,
-    height: 10,
-    width: 300,
   },
   Input: {
     flex: 1,
