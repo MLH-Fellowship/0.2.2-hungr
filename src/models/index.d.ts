@@ -15,6 +15,7 @@ export declare class Restaurant {
 export declare class Room {
   readonly id: string;
   readonly code?: string;
+  readonly size?: number;
   constructor(init: ModelInit<Room>);
   static copyOf(source: Room, mutator: (draft: MutableModel<Room>) => MutableModel<Room> | void): Room;
 }

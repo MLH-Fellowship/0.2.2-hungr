@@ -9,6 +9,7 @@ type Room @model {
   code: String
   restaurants: [Restaurant]
   users: [User]
+  size: Int
   current: Restaurant
 }
 

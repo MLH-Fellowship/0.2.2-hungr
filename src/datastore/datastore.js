@@ -23,6 +23,7 @@ class Database {
             Room.copyOf(old, updated => {
                 //more dumb syntax
                 updated.users = old.users.concat([user]);
+                updated.size = old.size + 1;
             })
         );
     }
@@ -34,10 +35,16 @@ class Database {
         console.log(old);
         await DataStore.save(
             Room.copyOf(old, updated => {
-                //more dumb syntax
-                updated.users = old.users.concat([user]);
+                // Filter the old array and keep all users not equal to the user we want to remove
+                updated.users = old.users.filter(u => u != user);
+                updated.size = old.size - 1;
             })
         );
+    }
+
+    /* Deletes all rooms with no users */
+    async purgeRooms() {
+        await DataStore.delete(Room, room => room.size("eq", 0));
     }
 
     /* Gets a room's data based on the code */
