@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import { Button, Input } from "react-native-elements";
 
-const JoinRoom = () => {
+const JoinRoom = (props) => {
   return (
     <View style={styles.container}>
       <Button
@@ -13,6 +13,7 @@ const JoinRoom = () => {
           fontSize: 30,
         }}
         buttonStyle={styles.buttonStyle}
+        onPress={() => props.navigation.navigate('Swipe')}
       />
       <Input
         placeholder="Room Pin"

@@ -1,8 +1,8 @@
-import React from 'react'
-import { SafeAreaView, StyleSheet } from 'react-native'
-import Swiper from 'react-native-deck-swiper'
-import { Card } from '../components/Card'
-import { SwipeScreenPics } from '../constants/Pics'
+import React from 'react';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import Swiper from 'react-native-deck-swiper';
+import { Card } from '../components/Card';
+import { SwipeScreenPics } from '../components/constants/Pics';
 
 class SwipeScreen extends React.Component {
   render() {
