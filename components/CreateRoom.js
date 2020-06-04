@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Button } from "react-native-elements";
 
-const FindRoom = () => {
+const CreateRoom = (props) => {
   return (
     <View style={styles.container}>
       <Button
@@ -13,6 +13,7 @@ const FindRoom = () => {
           fontSize: 30,
         }}
         buttonStyle={styles.buttonStyle}
+        onPress={() => props.navigation.navigate('ZipCode')}
       />
     </View>
   );
@@ -34,4 +35,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FindRoom;
+export default CreateRoom;
