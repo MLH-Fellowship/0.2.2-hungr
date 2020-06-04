@@ -13,7 +13,7 @@ const CreateRoom = (props) => {
           fontSize: 30,
         }}
         buttonStyle={styles.buttonStyle}
-        onPress={() => props.navigation.navigate('MatchScreen')}
+        onPress={() => props.navigation.navigate('ZipCode')}
       />
     </View>
   );
