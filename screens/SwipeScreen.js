@@ -1,40 +1,31 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
-import Header from "../components/Header";
-import JoinRoom from "../components/JoinRoom";
-import CreateRoom from "../components/CreateRoom";
+import React from 'react'
+import { SafeAreaView, StyleSheet } from 'react-native'
+import Swiper from 'react-native-deck-swiper'
+import { Card } from '../components/Card'
+import { SwipeScreenPics } from '../constants/Pics'
 
-export default function SwipeScreen({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <LinearGradient
-        colors={["#FD297B", "#FF5864", "#FF655B"]}
-        style={styles.gradient}
-      >
-        <Header title={header.title}/>
-        <JoinRoom />
-        <CreateRoom navigation={navigation} />
-      </LinearGradient>
-    </View>
-  );
-}
-
-const header = {
-  "title": {
-    "line1": "Swipe",
-    "line2": "Match",
-    "line3": "Eat"
+class SwipeScreen extends React.Component {
+  render() {
+    return (
+      <SafeAreaView style={styles.container}>
+        <Swiper
+          cards={SwipeScreenPics}
+          renderCard={Card}
+          infinite // keep looping cards infinitely
+          backgroundColor="white"
+          cardHorizontalMargin={0}
+          stackSize={2} // number of cards shown in background
+        />
+      </SafeAreaView>
+    )
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'transparent',
   },
-  gradient: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
+})
+
+export default SwipeScreen
