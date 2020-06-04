@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "./screens/HomeScreen";
 import ZipCodeScreen from "./screens/ZipCodeScreen";
 import SwipeScreen from "./screens/SwipeScreen";
+import MatchScreen from "./screens/MatchScreen";
 
 const Stack = createStackNavigator();
 

@@ -1,4 +1,5 @@
-import React from 'React';
+import * as React from "react";
+import { SafeAreaView, StyleSheet, Image } from 'react-native'
 import GetDirections from '../components/GetDirections';
 
 export default function MatchScreen(props) {
@@ -10,3 +11,15 @@ export default function MatchScreen(props) {
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  matchHeader: {
+
+  },
+  matchImage: {
+
+  },
+  directionsButton: {
+
+  }
+});
