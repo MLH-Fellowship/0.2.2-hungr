@@ -33,6 +33,13 @@ function App() {
             headerTransparent: true,
           }}
         />
+        <Stack.Screen
+          name="Match"
+          component={MatchScreen}
+          options={{
+            headerTransparent: true,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
