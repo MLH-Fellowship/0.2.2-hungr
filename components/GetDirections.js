@@ -1,19 +1,27 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { Button, Input } from "react-native-elements";
+import { LinearGradient } from "expo-linear-gradient";
 
 const GetDirections = () => {
   return (
     <View style={styles.container}>
-      <Button
-        title="Get Directions"
-        type="clear"
-        titleStyle={{
-          color: "white",
-          fontSize: 30,
-        }}
-        buttonStyle={styles.buttonStyle}
-      />
+      <LinearGradient
+        colors={["#FD297B", "#FF5864", "#FF655B"]}
+        start={{x: 0, y: 0}}
+        end={{x: 1, y: 0}}
+        style={styles.gradient}
+      >
+        <Button
+          title="Get Directions"
+          type="clear"
+          titleStyle={{
+            color: "white",
+            fontSize: 30,
+          }}
+          buttonStyle={styles.buttonStyle}
+        />
+      </LinearGradient>
     </View>
   );
 };
@@ -21,8 +29,6 @@ const GetDirections = () => {
 const styles = StyleSheet.create({
   buttonStyle: {
     backgroundColor: "transparent",
-    borderColor: "#fff",
-    borderWidth: 1,
     borderRadius: 60,
     height: 50,
     width: 300,
@@ -33,10 +39,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 30,
   },
-  Input: {
-    flex: 1,
-    alignItems: "center",
-  },
+  gradient: {
+    borderRadius: 60,
+  }
 });
 
 export default GetDirections;

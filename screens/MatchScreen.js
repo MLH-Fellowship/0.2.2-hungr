@@ -6,10 +6,6 @@ import GetDirections from '../components/GetDirections';
 export default function MatchScreen(props) {
   return (
     <SafeAreaView style={styles.container}>
-      <LinearGradient
-        colors={["#FD297B", "#FF5864", "#FF655B"]}
-        style={styles.gradient}
-      >
         <Image
           source={require('../assets/match.png')}
           style={styles.matchHeader}
@@ -24,15 +20,11 @@ export default function MatchScreen(props) {
           style={styles.matchImage}
         />
         <GetDirections />
-      </LinearGradient>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   matchHeader: {
     marginTop: 133,
   },
@@ -48,10 +40,11 @@ const styles = StyleSheet.create({
     borderColor: "#fff",
     marginTop: 48,
   },
-  gradient: {
+  container: {
     flex: 1,
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: 'rgba(52,52,52, 0.5)',
   },
 });
