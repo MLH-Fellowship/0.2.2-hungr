@@ -24,21 +24,14 @@ axios.get(url).then((response) => {
     let restaurantName = response.data.results[i].name;
     let restaurantRating = response.data.results[i].rating;
     let restaurantPhotoRef = response.data.results[i].photos[0].photo_reference;
-
-    axios
-      .get(
-        `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${restaurantPhotoRef}&key=${PLACES_API_KEY}`
-      )
-      .then((res) => {
-        let restaurantPhoto = res.data;
-        data = {
-          id: restaurantId,
-          name: restaurantName,
-          rating: restaurantRating,
-          photo: restaurantPhoto,
-        };
-        pushData(data);
-      });
+    let restaurantPhoto = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${restaurantPhotoRef}&key=${PLACES_API_KEY}`;
+    data = {
+      id: restaurantId,
+      name: restaurantName,
+      rating: restaurantRating,
+      photo: restaurantPhoto,
+    };
+    pushData(data);
   }
 });
 
