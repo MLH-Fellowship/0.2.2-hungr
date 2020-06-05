@@ -1,5 +1,7 @@
 # Hungr
 
+![Hungr Logo](./images/logo.png)
+
 > Swipe. Match. Eat.
 
 ## Motivation
@@ -16,8 +18,11 @@ found a place to eat!
 
 ## Our Technology
 
-We used a wide range of technologies to build Hungr. While we weren't
-necessarily experts in these, we still had a great experience using
+![Technology](images/tech.png)
+
+We used a wide range of open-source
+technologies to build Hungr. While we weren't
+necessarily experts in these, we still had a great experience developing
 and learning! Here's some of the most notable ones.
 
 ### Google Places API
