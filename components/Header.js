@@ -7,6 +7,7 @@ state = {
   fontsLoaded: false,
 };
 
+
 const Header = (props) => {
   let [fontsLoaded] = useFonts({
     "Raleway-Regular": require("../assets/fonts/Raleway-Regular.ttf"),

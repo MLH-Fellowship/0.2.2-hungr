@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-hungr-dev-145600-authRole",
+            "UnauthRoleArn": "arn:aws:iam::985474438260:role/amplify-hungr-dev-145600-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::985474438260:role/amplify-hungr-dev-145600-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-hungr-dev-145600-deployment",
+            "UnauthRoleName": "amplify-hungr-dev-145600-unauthRole",
+            "StackName": "amplify-hungr-dev-145600",
+            "StackId": "arn:aws:cloudformation:us-west-2:985474438260:stack/amplify-hungr-dev-145600/da045b00-a51b-11ea-8da9-026696022230",
+            "AmplifyAppId": "dj11rbbg52rlm"
+        }
+    }
+}

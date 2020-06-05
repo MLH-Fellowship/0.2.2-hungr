@@ -5,9 +5,14 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "amplify-modelgen": "node amplify/scripts/amplify-modelgen.js",
+    "amplify-push": "node amplify/scripts/amplify-push.js"
   },
   "dependencies": {
+    "@aws-amplify/core": "^3.3.1",
+    "@aws-amplify/datastore": "^2.2.1",
+    "@react-native-community/netinfo": "5.5.1",
     "@react-native-community/masked-view": "0.1.6",
     "@react-navigation/native": "^5.5.0",
     "@react-navigation/stack": "^5.4.1",
