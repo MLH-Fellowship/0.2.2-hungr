@@ -23,6 +23,13 @@ export const schema = {
                     "type": "Int",
                     "isRequired": false,
                     "attributes": []
+                },
+                "photo": {
+                    "name": "photo",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
                 }
             },
             "syncable": true,
@@ -55,6 +62,27 @@ export const schema = {
                     "name": "size",
                     "isArray": false,
                     "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "lat": {
+                    "name": "lat",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "long": {
+                    "name": "long",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "cuisine": {
+                    "name": "cuisine",
+                    "isArray": false,
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 }
@@ -91,5 +119,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "855635526e990e439a90d7135b0f0034"
+    "version": "a08fbfc6ea430c7c33192d2be81dffc6"
 };
