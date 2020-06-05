@@ -2,6 +2,7 @@ type Restaurant @model {
   id: ID!
   name: String!
   rating: Int
+  photo: String!
 }
 
 type Room @model {
@@ -11,6 +12,9 @@ type Room @model {
   users: [User]
   size: Int
   current: Restaurant
+  lat: Int
+  long: Int
+  cuisine: String
 }
 
 type User @model {
