@@ -2,13 +2,19 @@
 const axios = require("axios");
 const { DataStore } = require("@aws-amplify/datastore");
 const config = require("./config.json");
-const { Restaurant } = require("../src/models");
+const { Restaurant, Room } = require("../src/models");
 
 // Config
 const PLACES_API_KEY = config.PLACES_API_KEY;
-const LAT = config.LAT;
-const LONG = config.LONG;
-const CUISINE = config.CUISINE;
+getConfig();
+
+async function getConfig() {
+  let LAT = await DataStore.query(Room.lat);
+  LAT = LAT.toString();
+  let LONG = await DataStore.query(Room.long);
+  LONG = LONG.toString();
+  const CUISINE = await DataStore.query(Room.cuisine);
+}
 
 let url = "";
 
