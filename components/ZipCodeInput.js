@@ -2,21 +2,20 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import { Button, Input } from "react-native-elements";
 
-const JoinRoom = (props) => {
+const ZipCodeInput = () => {
   return (
     <View style={styles.container}>
-      <Button
-        title="Join a room"
+      {/* <Button
+        title="ZipCode"
         type="clear"
         titleStyle={{
           color: "white",
           fontSize: 30,
         }}
         buttonStyle={styles.buttonStyle}
-        onPress={() => props.navigation.navigate('Swipe')}
-      />
+      /> */}
       <Input
-        placeholder="Room Pin"
+        placeholder="Zip Code"
         containerStyle={styles.Input}
         enablesReturnKeyAutomatically={true}
       />
@@ -49,4 +48,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default JoinRoom;
+export default ZipCodeInput;

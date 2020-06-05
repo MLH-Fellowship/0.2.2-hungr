@@ -7,7 +7,8 @@ state = {
   fontsLoaded: false,
 };
 
-const Header = () => {
+
+const Header = (props) => {
   let [fontsLoaded] = useFonts({
     "Raleway-Regular": require("../assets/fonts/Raleway-Regular.ttf"),
   });
@@ -16,9 +17,9 @@ const Header = () => {
   } else {
     return (
       <View style={styles.header}>
-        <Text style={styles.text}>Swipe</Text>
-        <Text style={styles.text}>Match</Text>
-        <Text style={styles.text}>Eat</Text>
+        <Text style={styles.text}>{props.title.line1}</Text>
+        <Text style={styles.text}>{props.title.line2}</Text>
+        <Text style={styles.text}>{props.title.line3}</Text>
       </View>
     );
   }
@@ -28,7 +29,8 @@ const styles = StyleSheet.create({
   header: {
     flex: 1,
     alignItems: "center",
-    padding: 100,
+    paddingTop: 100,
+    paddingBottom:100,
   },
   text: {
     fontFamily: "Raleway-Regular",
